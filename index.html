@@ -73,6 +73,7 @@
   </style>
 </head>
 <body>
+ 
   <h1>🎉 Happy Birthday, Langga! 🎉</h1>
   <button onclick="startSurprise()">Click for Surprise 💖</button>
   
@@ -86,8 +87,8 @@
   </div>
   
   <!-- Message -->
-  <p id="message">Every photo reminds me how lucky I am to have you, Langga. 💕</p>
-
+  <p id="message">"Happy Birthday, Langga! 💖 You’re my sunshine, my safe place, and my greatest blessing. I love you more every day. 🎂✨"</p>
+<audio id="bg-music" src="Birthdaysong.mp3" loop></audio>
   <script>
     // Floating hearts
     function createHeart() {
@@ -110,6 +111,10 @@
       document.getElementById('photo').src = photos[currentIndex];
       document.getElementById('gallery-controls').style.display = 'block';
       document.getElementById('message').style.display = 'block';
+      const music = document.getElementById('bg-music');
+      music.play().catch(() => {
+        alert('Please tap the screen again to start the music 🎶');
+      });
       alert('Happy Birthday, Langga! 💖 Here are some memories for you.');
     }
 
@@ -124,4 +129,6 @@
     }
   </script>
 </body>
+
+
 </html>
